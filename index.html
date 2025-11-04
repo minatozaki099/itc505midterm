@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadows of Hollowvale</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="title">
+      <span class="title-chunk">Shadows</span>
+      <span class="title-chunk alt">of Hollowvale</span>
+    </h1>
+    <div class="controls">
+      <button id="btnRestart" class="btn ghost">Restart</button>
+      <button id="btnToggleAmbience" class="btn">Play Ambience</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section id="panel" class="panel">
+      <div class="panel-image-wrap">
+        <img id="panelImage" src="images/mansion-front.png" alt="scene" class="panel-image" />
+      </div>
+
+      <div class="bubble" id="storyBubble">
+        <p id="storyText">Loading story...</p>
+      </div>
+
+      <div id="choices" class="choices"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+
+  <audio id="ambience" loop preload="auto">
+    <source src="audio/low-rumble-ambience.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
